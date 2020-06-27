@@ -31,7 +31,7 @@ The original upstream project is maintained by Tapptitude, a mobile app developm
 
 ## Requirements
 
-- iOS 8.0+
+- iOS 11.0+
 - Xcode 7.3+
 
 ## Installation
@@ -41,35 +41,13 @@ _CocoaPods_
 _Swift 5.0_
 
 ```ruby
-pod 'TTSegmentedControl', '~>0.4.9'
-```
-_Swift 4.2_
-
-```ruby
-pod 'TTSegmentedControl', '~>0.4.8'
-```
-
-_Swift 4.0_
-
-```ruby
-pod 'TTSegmentedControl', '~>0.4.6'
-```
-
-_Swift 3.X_
-
-```ruby
-pod 'TTSegmentedControl', '~>0.3'
-```
-
-_Swift 2.x_
-```ruby
-pod 'TTSegmentedControl', '0.1.1'
+pod 'TTSegmentedControl', '~>0.4.11'
 ```
 
 _Carthage_
 
 ```
-github "tapptitude/TTSegmentedControl"
+github "ramjyroo/TTSegmentedControl"
 ```
 
 _Manually_
