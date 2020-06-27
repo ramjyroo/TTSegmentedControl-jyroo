@@ -12,9 +12,9 @@ An elegant, animated and customizable segmented control for iOS.
 
 The original upstream project is maintained by Tapptitude, a mobile app development agency specialized in building high-quality iOS and Android mobile apps, for startups and brands alike. A lively team of skilled app developers and app designers based in Europe, we provide full-stack mobile app development services to entrepreneurs looking to innovate on mobile. 
 
-![](Resources/TTSegmentedControl.gif)
+## This fork is maintained by Jyroo
 
-This fork is maintained by Jyroo
+![](Resources/TTSegmentedControl.gif)
 
 ## Features:
 - Variable number of items 
