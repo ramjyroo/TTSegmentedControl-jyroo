@@ -10,10 +10,11 @@
 ## About
 An elegant, animated and customizable segmented control for iOS.
 
-This project is maintained by Tapptitude, a mobile app development agency specialized in building high-quality iOS and Android mobile apps, for startups and brands alike. A lively team of skilled app developers and app designers based in Europe, we provide full-stack mobile app development services to entrepreneurs looking to innovate on mobile. 
+The original upstream project is maintained by Tapptitude, a mobile app development agency specialized in building high-quality iOS and Android mobile apps, for startups and brands alike. A lively team of skilled app developers and app designers based in Europe, we provide full-stack mobile app development services to entrepreneurs looking to innovate on mobile. 
+
+## This fork is maintained by Jyroo
 
 ![](Resources/TTSegmentedControl.gif)
-
 
 ## Features:
 - Variable number of items 
@@ -21,6 +22,12 @@ This project is maintained by Tapptitude, a mobile app development agency specia
 - Bounce animation
 - Fully configurable (color, gradient, shadow, corner radius)
 - Designable into Interface Builder
+
+## Additional features added by Jyroo
+- Ability to set locations for gradient - Updated demo to use a thumb with 4 gradients and 4 locations
+- Replaced demo project to use programmatic UI
+- Ability to set attibuted titles directly for normal and selected stated - Updated demo to use icon + labels for each tab
+- Updated the icons for demo project
 
 ## Requirements
 
