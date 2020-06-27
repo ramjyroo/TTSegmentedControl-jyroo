@@ -14,7 +14,7 @@ The original upstream project is maintained by Tapptitude, a mobile app developm
 
 ## This fork is maintained by Jyroo
 
-![](Resources/TTSegmentedControl.gif)
+![](Resources/newTTSegmentedControl.gif)
 
 ## Features:
 - Variable number of items 
