@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 @IBDesignable
 open class TTSegmentedControl: UIView {
     
@@ -22,7 +21,8 @@ open class TTSegmentedControl: UIView {
     
     @IBInspectable open var containerBackgroundColor: UIColor = TTSegmentedControl.UIColorFromRGB(0xF4F4F4)
     @IBInspectable open var thumbColor: UIColor = UIColor.clear
-    @IBInspectable open var thumbGradientColors: [UIColor]? = [TTSegmentedControl.UIColorFromRGB(0xFFE900),TTSegmentedControl.UIColorFromRGB(0xFFB400)]
+    @IBInspectable open var thumbGradientColors: [UIColor]? =  [TTSegmentedControl.UIColorFromRGB(0xFFE900),TTSegmentedControl.UIColorFromRGB(0xFFB400)]
+    @IBInspectable open var thumbGradientLocations: [NSNumber]? = nil
     @IBInspectable open var thumbShadowColor: UIColor = TTSegmentedControl.UIColorFromRGB(0x9B9B9B)
     @IBInspectable open var useShadow:Bool = true
     
@@ -63,6 +63,7 @@ open class TTSegmentedControl: UIView {
     
     fileprivate var containerView = UIView()
     fileprivate var thumbContainerView = UIView()
+    //fileprivate var thumbView = UIView()
     fileprivate var thumbView = UIView()
     fileprivate var selectedLabelsView = UIView()
     
@@ -121,7 +122,7 @@ open class TTSegmentedControl: UIView {
         super.layoutSubviews()
         
         if !isConfigurated {
-            configureItemsConent()
+            configureItemsContent()
             configureViewBounds()
             configureContainerView()
             configureItems()
@@ -243,6 +244,7 @@ extension TTSegmentedControl {
             gradientLayer.endPoint = CGPoint(x: 0.5, y: 1.0)
             gradientLayer.backgroundColor = thumbColor.cgColor
             gradientLayer.colors = thumbGradientColors!.map({$0.cgColor})
+            gradientLayer.locations = thumbGradientLocations
             thumbView.backgroundColor = UIColor.clear
             thumbView.layer.addSublayer(gradientLayer)
         }
@@ -261,7 +263,13 @@ extension TTSegmentedControl {
     }
     
     
-    fileprivate func configureItemsConent() {
+    fileprivate func configureItemsContent() {
+        if self.itemTitles.count == 0 {
+            if attributedDefaultTitles.count > 1, attributedSelectedTitles.count == attributedDefaultTitles.count {
+                print("Default and Selected titles are directly provided as attibuted strings - will use them")
+                return
+            }
+        }
         var unselectedAttributedStrings = [NSAttributedString]()
         for title in itemTitles {
             let attString = attributedStringForText(title, isSelected: false)
@@ -732,7 +740,8 @@ extension TTSegmentedControl {
         }
         
         itemTitles[atIndex] = title.string
-        
+        print(itemTitles)
+        self.setNeedsLayout()
     }
     
     open func titleForItemAtIndex(_ index: Int) -> String {
