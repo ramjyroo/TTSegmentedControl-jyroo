@@ -22,6 +22,12 @@ This project is maintained by Tapptitude, a mobile app development agency specia
 - Fully configurable (color, gradient, shadow, corner radius)
 - Designable into Interface Builder
 
+## Additional features added by Jyroo
+- Ability to set locations for gradient - Updated demo to use a thumb with 4 gradients and 4 locations
+- Replaced demo project to use programmatic UI
+- Ability to set attibuted titles directly for normal and selected stated - Updated demo to use icon + labels for each tab
+- Updated the icons for demo project
+
 ## Requirements
 
 - iOS 8.0+
